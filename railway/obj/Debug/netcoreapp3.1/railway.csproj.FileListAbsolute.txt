@@ -1,0 +1,13 @@
+C:\Users\MS_PC\Desktop\test2\railway\railway\bin\Debug\netcoreapp3.1\railway.exe
+C:\Users\MS_PC\Desktop\test2\railway\railway\bin\Debug\netcoreapp3.1\railway.deps.json
+C:\Users\MS_PC\Desktop\test2\railway\railway\bin\Debug\netcoreapp3.1\railway.runtimeconfig.json
+C:\Users\MS_PC\Desktop\test2\railway\railway\bin\Debug\netcoreapp3.1\railway.runtimeconfig.dev.json
+C:\Users\MS_PC\Desktop\test2\railway\railway\bin\Debug\netcoreapp3.1\railway.dll
+C:\Users\MS_PC\Desktop\test2\railway\railway\bin\Debug\netcoreapp3.1\railway.pdb
+C:\Users\MS_PC\Desktop\test2\railway\railway\obj\Debug\netcoreapp3.1\railway.csprojAssemblyReference.cache
+C:\Users\MS_PC\Desktop\test2\railway\railway\obj\Debug\netcoreapp3.1\railway.AssemblyInfoInputs.cache
+C:\Users\MS_PC\Desktop\test2\railway\railway\obj\Debug\netcoreapp3.1\railway.AssemblyInfo.cs
+C:\Users\MS_PC\Desktop\test2\railway\railway\obj\Debug\netcoreapp3.1\railway.csproj.CoreCompileInputs.cache
+C:\Users\MS_PC\Desktop\test2\railway\railway\obj\Debug\netcoreapp3.1\railway.dll
+C:\Users\MS_PC\Desktop\test2\railway\railway\obj\Debug\netcoreapp3.1\railway.pdb
+C:\Users\MS_PC\Desktop\test2\railway\railway\obj\Debug\netcoreapp3.1\railway.genruntimeconfig.cache
