@@ -10,9 +10,6 @@ namespace railway.include
         private static int speed = 1;
         private List<Transition> allTrainTranstions = new List<Transition>();
 
- 
-
-
         public  void AddTransitionToTrain(Transition transition)
         {
             allTrainTranstions.Add(transition);
@@ -23,12 +20,9 @@ namespace railway.include
             if (time == 0) return true;
             if (allTrainTranstions[time] != allTrainTranstions[time - 1]) return true;
             return false;
-
-
         }
         public int GetLastTrainStation(int time)
         {
-
             return allTrainTranstions[time].GetdispatchStationID();
         }
 
@@ -37,8 +31,7 @@ namespace railway.include
             int time = 0;
             foreach(Transition transition in allTrainTranstions)
             {
-                time = time + speed * 1;
-                
+                time = time + speed * 1;              
             }
             return time;
             
@@ -54,23 +47,10 @@ namespace railway.include
 
         public bool TrainExistAtMoment(int time)
         {
-          
+       
             if (time >= this.GetTrainTimeOnTheWay()) return false;
             return true;
-
-         
+       
         }
-
-        
-
-        
-
-
-
-
-
-
-
-
     }
 }
