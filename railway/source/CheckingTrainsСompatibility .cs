@@ -63,7 +63,7 @@ namespace railway.source
                    
                     bool g = trainTime_Table.TrainExistAtMoment(time, train_one_Id);
                     bool p = trainTime_Table.TrainExistAtMoment(time, train_two_Id);
-                    //Console.WriteLine("Time {0} // Train 1 {1}   {2} // Train 2 {3}  {4} /// SAFE {5}", time , train_two_Id, g , train_two_Id,p,safe);
+                    Console.WriteLine("Time {0} // First Train№{1}   {2} // Second Train№{3}  {4} /// SAFE {5}", time , train_two_Id, g , train_two_Id,p,safe);
 
                     if (trainTime_Table.TrainExistAtMoment(time,train_one_Id) && trainTime_Table.TrainExistAtMoment(time, train_two_Id) && (train_one_Id != train_two_Id))
                          CheckTwoTrainsAtOneMoment(time, train_one_Id, train_two_Id);
