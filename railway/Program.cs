@@ -1,19 +1,21 @@
 ﻿using System;
+using RailWay.Common;
+using RailWay.Providers;
+using RailWay.Validator;
 
-using railway.source;
 
-
-namespace railway
+namespace RailWay
 {
     class Program
     {
+        private const string stationDistancesPath = @"..\..\..\data\\StationDistances.txt";
+        private const string trainsRoutesPath = @"..\..\..\data\TrainsRoutes.txt";
 
-        
 
         static void Main(string[] args)
         {
-
-            if (CheckingTrainsСompatibility.Check()) Console.WriteLine("Schedule safe ");
+            RailValidator railValidator = new RailValidator();
+            if (railValidator.Validate(stationDistancesPath, trainsRoutesPath)) Console.WriteLine("Schedule safe ");
             else Console.WriteLine("Schedule unsafe ");
 
 

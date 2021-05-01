@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "railway/1.0.0": {
+      "RailWay/1.0.0": {
         "runtime": {
-          "railway.dll": {}
+          "RailWay.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "railway/1.0.0": {
+    "RailWay/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
