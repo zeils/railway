@@ -8,7 +8,8 @@ namespace railway.include
     {
         private  List<Train> AllTrainsTime_table = new List<Train>();
 
-   
+    
+
         public void AddTrainToTime_table(Train train)
         {
             AllTrainsTime_table.Add(train);
@@ -35,7 +36,10 @@ namespace railway.include
         {
 
             return AllTrainsTime_table[trainID].GetLastTrainStation(time);
-                               
+                
+                
+                
+                
         }
 
         public bool TrainAtStation(int time, int trainID)
@@ -54,6 +58,10 @@ namespace railway.include
         {
             if (AllTrainsTime_table[trainID].TrainExistAtMoment(time)) return true;
             return false;
+
+
         }
+
+
     }
 }

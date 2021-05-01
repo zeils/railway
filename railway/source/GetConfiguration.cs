@@ -10,8 +10,14 @@ namespace railway.source
     {
         private static string path = @"..\..\..\data\configuration.txt";
 
+
+        
+
+
+
         public static Configuration Read()
         {
+            
 
             Configuration new_configuration = new Configuration();
             string line;
@@ -33,8 +39,14 @@ namespace railway.source
                 {
                     Console.WriteLine("Ошибка чтения Config");
                 }
-            }  
+                
+                
+                
+
+            }
+            
             return new_configuration;
         }
+
     }
 }

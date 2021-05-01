@@ -13,14 +13,20 @@ namespace railway.include
         {
             this.dispatchStationID = dispatchStationID;
             this.arrivalStationID = arrivalStationID;
-            this.length = length;  
+            this.length = length;
+            
+
         }
-        
+        static Transition()
+        {
+           
+        }
 
         public static bool IsOposite(Transition one, Transition two)
         {
             if ((one.dispatchStationID == two.arrivalStationID) && (one.arrivalStationID == two.dispatchStationID)) return true;
             return false;
+
 
         }
     
