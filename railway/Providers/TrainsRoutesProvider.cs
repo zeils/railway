@@ -23,8 +23,9 @@ namespace RailWay.Providers
                 Train train = new Train();
                 for (int i = 0; i < nums.Length - 1; i++)
                 {
-                    Route route = new Route(nums[i], nums[i + 1], stationRoutes.FindLengthOfRoute(nums[i], nums[i + 1]));
-                    for (int j = 0; j < stationRoutes.FindLengthOfRoute(nums[i], nums[i + 1]); j++)
+                    int lengthOfRoute = stationRoutes.FindLengthOfRoute(nums[i], nums[i + 1]);
+                    Route route = new Route(nums[i], nums[i + 1], lengthOfRoute);
+                    for (int j = 0; j < lengthOfRoute; j++)
                     {
                         train.AddRoute(route);
                     }
