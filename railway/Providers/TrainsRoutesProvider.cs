@@ -18,7 +18,6 @@ namespace RailWay.Providers
             string[] lines = File.ReadAllLines(trainsRoutesPath);
             foreach (string line in lines)
             {
-                Train new_train = new Train();
                 int[] nums = Array.ConvertAll(line.Split(new char[] { ' ' }), int.Parse);
                 Train train = new Train();
                 for (int i = 0; i < nums.Length - 1; i++)
