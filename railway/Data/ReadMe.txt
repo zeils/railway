@@ -1,6 +1,6 @@
-Configuration:
+StationDistances:
 a b c // где, a - станция№1, б - станция№2, с - расстояние между ними
 
 
-Time_table:
+TrainsRoutes:
 a b c .. // где a,b,c номера станций через которые едет поезд
