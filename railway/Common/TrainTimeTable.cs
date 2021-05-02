@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RailWay.Common;
-using RailWay.Providers;
-using RailWay.Validator;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace RailWay.Common
 {
-    class TrainTime_table
+    class TrainTimeTable
     {
         private  List<Train> allTrains = new List<Train>();
         public int Count => allTrains.Count;
@@ -23,7 +18,7 @@ namespace RailWay.Common
             return allTrains.Max(train => train.Count);
         }
        
-        public int GetLastTrainStation(int trainNumber, int tick)
+        public int GetLastTrainRoute(int trainNumber, int tick)
         {
             return allTrains[trainNumber].GetLastTrainStation(tick);                                              
         }
@@ -34,13 +29,19 @@ namespace RailWay.Common
         }
         public bool TwoTrainIntersecting(int firstTrainNumber, int secondTrainNumber, int tick)
         {
-            if (this.allTrains[firstTrainNumber].IsIntersecting(this.allTrains[secondTrainNumber],tick)) return true;           
+            if (this.allTrains[firstTrainNumber].IsIntersecting(this.allTrains[secondTrainNumber], tick)) 
+            {           
+                return true;
+            }
             return false;
         }
 
         public bool TrainExistAtMoment(int trainNumber, int tick)
         {
-            if (allTrains[trainNumber].ExistAtTeak(tick)) return true;
+            if (allTrains[trainNumber].ExistAtTick(tick))
+            {
+                return true;
+            }
             return false;
         }
     }

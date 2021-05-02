@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using RailWay.Common;
-using RailWay.Providers;
-using RailWay.Validator;
+
 
 
 
@@ -12,11 +11,11 @@ namespace RailWay.Providers
 {
     static class TrainsRoutesProvider
     {
-        public static TrainTime_table Read(string stationDistancesPath, string trainsRoutesPath)
+        public static TrainTimeTable Read(string stationDistancesPath, string trainsRoutesPath)
         {
             StationRoutes stationRoutes = StationDistancesProvider.Read(stationDistancesPath);
-            TrainTime_table trainTime_Table = new TrainTime_table();
-            List<string> lines = CommonProvider.Read(trainsRoutesPath);
+            TrainTimeTable trainTime_Table = new TrainTimeTable();
+            string[] lines = File.ReadAllLines(trainsRoutesPath);
             foreach (string line in lines)
             {
                 Train new_train = new Train();

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RailWay.Common;
-using RailWay.Providers;
-using RailWay.Validator;
+﻿using System.Collections.Generic;
 
 
 namespace RailWay.Common
@@ -20,7 +15,10 @@ namespace RailWay.Common
         public bool TrainAtStation(int tick)
         {
             if (tick == 0) return true;
-            if (trainRoutes[tick] != trainRoutes[tick - 1]) return true;
+            if (trainRoutes[tick] != trainRoutes[tick - 1])
+            {
+                return true;
+            }
             return false;
         }
 
@@ -31,13 +29,19 @@ namespace RailWay.Common
    
         public bool IsIntersecting(Train train, int tick )
         {
-            if (this.trainRoutes[tick].IsIntersecting(train.trainRoutes[tick])) return true;
+            if (this.trainRoutes[tick].IsIntersecting(train.trainRoutes[tick]))
+            {
+                return true;
+            }
             return false;           
         }
 
-        public bool ExistAtTeak(int tick)
+        public bool ExistAtTick(int tick)
         {        
-            if (tick >= Count) return false;
+            if (tick >= Count)
+            {
+                return false;
+            }
             return true;       
         }      
     }

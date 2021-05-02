@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RailWay.Common;
-using RailWay.Providers;
-using RailWay.Validator;
+﻿
 
 namespace RailWay.Common
 {
@@ -23,10 +18,26 @@ namespace RailWay.Common
             this.length = length;
         }
 
+
+
         public bool IsIntersecting(Route route)
         {
-            if ((dispatchStationNumber == route.arrivalStationNumber) && (arrivalStationNumber == route.dispatchStationNumber)) return true;
+            if ((dispatchStationNumber == route.arrivalStationNumber) && (arrivalStationNumber == route.dispatchStationNumber))
+            {
+                return true;
+            }
             return false;
+        }
+
+        public bool IsSameRoute(int dispatchStationNumber, int arrivalStationNumber)
+        {
+            if ((this.dispatchStationNumber == dispatchStationNumber) && (this.arrivalStationNumber == arrivalStationNumber))
+            {
+                return true;
+            }
+            return false;
+
+
         }
 
     }

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using RailWay.Common;
-using RailWay.Providers;
-using RailWay.Validator;
 using System.IO;
 
 namespace RailWay.Providers
@@ -13,7 +9,7 @@ namespace RailWay.Providers
         public static StationRoutes Read(string stationDistancesPath)
         {          
             StationRoutes newStationRoutes = new StationRoutes();
-            List<string> lines = CommonProvider.Read(stationDistancesPath);
+            string[] lines = File.ReadAllLines(stationDistancesPath);
             foreach (string line in lines)
             {
                 int[] nums = Array.ConvertAll(line.Split(new char[] { ' ' }), int.Parse);

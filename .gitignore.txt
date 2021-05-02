@@ -1,0 +1,3 @@
+/railway/obj
+
+/railway/bin/Debug/netcoreapp3.1

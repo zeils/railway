@@ -1,6 +1,4 @@
 ﻿using System;
-using RailWay.Common;
-using RailWay.Providers;
 using RailWay.Validator;
 
 
@@ -14,8 +12,8 @@ namespace RailWay
 
         static void Main(string[] args)
         {
-            RailValidator railValidator = new RailValidator();
-            if (railValidator.Validate(stationDistancesPath, trainsRoutesPath)) Console.WriteLine("Schedule safe ");
+           
+            if (RailValidator.Validate(stationDistancesPath, trainsRoutesPath)) Console.WriteLine("Schedule safe ");
             else Console.WriteLine("Schedule unsafe ");
 
 

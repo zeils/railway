@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using RailWay.Common;
-using RailWay.Providers;
-using RailWay.Validator;
+﻿using System.Collections.Generic;
+
 
 namespace RailWay.Common
 {
@@ -25,9 +21,9 @@ namespace RailWay.Common
         {
             foreach (Route route in allPosibleRoutes)
             {
-                if ((dispatchStationNumber == route.DispatchStationNumber) && (arivalStationNumber == route.ArrivalStationNumber)) return route.Length;
+                if (route.IsSameRoute(dispatchStationNumber, arivalStationNumber)) return route.Length;
             }
             return 0;
-        }
+        }       
     }
 }
